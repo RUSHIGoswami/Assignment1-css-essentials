@@ -4,7 +4,8 @@
   margin: 0;
 }
 
-/* Using flexbox form aligning components in columns. */
+/* I have used short-hand property only when I needed to set all values otherwise I used specific property only. */
+/* Using flexbox for aligning components column wise. */
 
 body{
   font: 1em Georgia, 'Times New Roman', Times, serif;
@@ -13,17 +14,17 @@ body{
   display: flex;
 }
 
-/* I have used short-hand property only when I needed to set all values otherwise I used specific property only. */
-
 /* Navigation component */
 
 nav{
-  margin: 2em 2em 1em 0;
+  margin: 2em 2em 1em 0; /* margin: top right bottom left; */
 }
 
 ul{
   list-style-type: none;
 }
+
+/* styling li tags for padding and border. */
 
 li{
   background-color: #fff;
@@ -38,21 +39,24 @@ li{
 main{
   width: auto;
   margin-top: 1em;
+  /* using flex-grow for main so it take all the remaining width of viewport width.*/
   flex-grow: 2;
 }
 
-/* All the childs of main element should have margin at bottom. */
+/* All the childs of main element would have margin at bottom by using combinators.  */
 main > *{
   margin-bottom: 0.5em;
 }
 
 h1{
   margin-bottom: 0.7em;
+  /* As h1 is having different font family which is sans-serif.*/
   font-family: Helvetica, Geneva, Tahoma, sans-serif;
 }
 
 .main-text{
-  border-bottom: 1px dashed ; /* I do not need to set border-color as it gets inherited by-default from body element. */
+  /* I do not need to set border-color as it gets inherited by-default from body element. */
+  border-bottom: 1px dashed;
   margin-bottom: 1em;
 }
 
@@ -61,10 +65,12 @@ h1{
   margin-bottom: 1.2em;
 }
 
-p:last-child {
+/* Using pseudo selector for selcting the last p element of main-text class (main element). */
+.main-text > *:last-child {
   margin-bottom: 3em;
 }
 
 .address{
+  /* fonts having italic style. */
   font-style: italic;
 }
