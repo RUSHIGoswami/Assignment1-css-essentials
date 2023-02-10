@@ -1,0 +1,70 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Using flexbox form aligning components in columns. */
+
+body{
+  font: 1em Georgia, 'Times New Roman', Times, serif;
+  background-color: #d8da3d;
+  color: #800080;
+  display: flex;
+}
+
+/* I have used short-hand property only when I needed to set all values otherwise I used specific property only. */
+
+/* Navigation component */
+
+nav{
+  margin: 2em 2em 1em 0;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  background-color: #fff;
+  width: auto;
+  padding: 0.35em 2.5em 0.3em 0.3em;
+  margin: 0.5em;
+  border-right: 1em solid #000;
+}
+
+/* Main component */
+
+main{
+  width: auto;
+  margin-top: 1em;
+  flex-grow: 2;
+}
+
+/* All the childs of main element should have margin at bottom. */
+main > *{
+  margin-bottom: 0.5em;
+}
+
+h1{
+  margin-bottom: 0.7em;
+  font-family: Helvetica, Geneva, Tahoma, sans-serif;
+}
+
+.main-text{
+  border-bottom: 1px dashed ; /* I do not need to set border-color as it gets inherited by-default from body element. */
+  margin-bottom: 1em;
+}
+
+/* All the p elements of main-text class will get following styles. */
+.main-text p{
+  margin-bottom: 1.2em;
+}
+
+p:last-child {
+  margin-bottom: 3em;
+}
+
+.address{
+  font-style: italic;
+}
