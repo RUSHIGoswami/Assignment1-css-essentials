@@ -63,7 +63,7 @@ h1{
 
 .main-text{
   /* I do not need to set border-color as it gets inherited by-default from body element. */
-  border-bottom: 1px dashed;
+  border-bottom: 1px dotted;
   margin-bottom: 1em;
 }
 
