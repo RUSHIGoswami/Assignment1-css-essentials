@@ -1,3 +1,4 @@
+/* Universal selector for reseting padding and margins of all elements initially and for initializing boder-box. */
 *{
   box-sizing: border-box;
   padding: 0;
